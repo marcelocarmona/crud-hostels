@@ -20,7 +20,7 @@ class hostelService {
     this.hostels = {
       0: { id: 0 , name: 'Hotel Marcelo Carmona', stars:5, price: 4861, image:'profile' },
       1: { id: 1 , name: 'Hotel Emperador', stars:3, price: 1596, image:'default' },
-      2: { id: 2 , name: 'Petit Palace San Bernardo', stars:4, price: 2145, image:'default' },
+      2: { id: 2 , name: 'Petit Palace', stars:4, price: 2145, image:'default' },
       3: { id: 3 , name: 'Hotel Nuevo Boston', stars:2, price: 861, image:'default' }
     }
     this.idGenerator = 3;
