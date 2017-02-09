@@ -1,0 +1,119 @@
+<md-card md-theme-watch>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">Objetivos</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <p>
+      El objetivo de este ejercicio es representar el trabajo típico de un perfil frontend. Sentite libre de agregar/modificar todo lo que consideres necesario para sumarle valor al proyecto, sin perjudicar los tiempos de entrega y la idea central del ejercicio.
+    </p>
+    <p>
+      <b>Ejercicio:</b><br>
+      Maquetar una página de resultado de hoteles (ver adjunto).
+      Utilizar el siguiente modelo de respuesta con angular.js 1.x, para listar los hoteles dinámicamente.
+
+<pre>Modelo de respuesta:
+
+{
+  &quot;hotels&quot; : [
+    {
+    &quot;name&quot; : &quot;Hotel Emperador&quot;,
+    &quot;stars&quot; : &quot;3&quot;,
+    &quot;price&quot; : &quot;1596,
+    },
+    {
+    &quot;name&quot; : &quot;Petit Palace San Bernardo&quot;,
+    &quot;stars&quot; : &quot;4&quot;,
+    &quot;price&quot; : &quot;2145&quot;,
+    },
+    {
+    &quot;name&quot; : &quot;Hotel Nuevo Boston&quot;,
+    &quot;stars&quot; : &quot;2&quot;,
+    &quot;price&quot; : &quot;861&quot;,
+    }
+  ]
+}
+</pre>
+    <p>
+      Tener en cuenta:
+      <ul>
+        <li>Utilizar HTML5.</li>
+        <li>Grilla a elección para el maquetado.</li>
+        <li>Utilizar features de CSS3 cuando sea posible.</li>
+      </ul>
+    </p>
+    <p>
+      Extras/Plus: Los plus son adicionales que suman valor a tu ejercicio, aunque no son obligatorios.
+      <ul>
+        <li>Uso de patrones de diseño y best practices (componentes, filtros, factories, etc).</li>
+        <li>Utilización de pre-procesador de css.</li>
+        <li>Utilización de sprites, svg, font-face para fuentes e iconos.</li>
+        <li>Desarrollar los filtros/ordenamiento de precio y estrellas.</li>
+        <li>Realizar unit test.</li>
+      </ul>
+    </p>
+  </md-card-content>
+</md-card>
+<md-card md-theme-watch>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">Entrega</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <h3>Instalación</h3>
+    <pre>
+      <code>git clone https://github.com/marcelocarmona/crud-hostels.git</code><br>
+      <code>npm install</code><br>
+      <code>npm start</code><br>
+    </pre>
+    <h3>Estructura de archivos</h3>
+    <p>La estructura de archivos esta basada en el style guide de todd motto
+      <a href="https://github.com/toddmotto/angular-styleguide" target="_blank">https://github.com/toddmotto/angular-styleguide</a>
+    </p>
+    <pre>
+  client
+  ⋅⋅app/
+  ⋅⋅⋅⋅app.js * modulo de angular principal
+  ⋅⋅⋅⋅app.html * template de app
+  ⋅⋅⋅⋅common/ * funcionalidad genérica en este caso solo tiene el user.service que funcionaria como "store"
+  ⋅⋅⋅⋅components/ * donde viven los componente
+  ⋅⋅⋅⋅⋅⋅components.js * components modulo de angular que contiene a los componentes
+  ⋅⋅⋅⋅⋅⋅home/ * carpeta del componente home
+  ⋅⋅⋅⋅⋅⋅⋅⋅home.js * archivo de entrada de home es un modulo angular (rutas, configuraciones)
+  ⋅⋅⋅⋅⋅⋅⋅⋅home.component.js * directiva de home
+  ⋅⋅⋅⋅⋅⋅⋅⋅home.controller.js * controller de home
+  ⋅⋅⋅⋅⋅⋅⋅⋅home.scss * estilos de home
+  ⋅⋅⋅⋅⋅⋅⋅⋅home.html * template de home
+  ⋅⋅⋅⋅⋅⋅⋅⋅home.spec.js * tests de home (se testea por modulo, componente, y controller)
+  ⋅⋅⋅⋅⋅⋅⋅
+</pre>
+    <h3>Testing Setup</h3>
+    Los tests estan escritos en ES6 y el testing stack es:
+    <ul>
+      <li>Karma</li>
+      <li>Webpack + Babel</li>
+      <li>Mocha</li>
+      <li>Chai</li>
+    </ul>
+    <h3>Tasks</h3>
+    <p><b><code>npm start</code></b> Con gulp se levanta un <a href="https://browsersync.io/" target="_blank">browser-sync</a>      que permite conectar otros dispositivos a la red para probar la aplicacion (ver puerto 3001). Con webpack se genera
+      el bundle</p>
+    <p><b><code>npm test</code></b> Karma con Webpack corren todos los archivos que machean con <code>*.spec.js</code> adentro
+      de <code>app</code> folder.</p>
+    <p><b><code>npm run build</code></b> corre webpack, concatena y comprime el "bundle" los assets estan en dist/bundle.js</p>
+    <p><b><code>npm run component</code></b> con esta task se pueden crear el scaffold de un componente sin tener que crear
+      todos los archivos a mano.
+      <b><code>npm run component -- --name componentName</code></b> se puede ver el template de lo que se crea en la carpeta
+      generator.
+    </p>
+    <h3>UI Kit</h3>
+    <p>Se utiliza <a href="https://material.angularjs.org/latest/" target="_blank">angular-material</a></p>
+    <div class="images-container">
+      <img src="~common/images/screen1.png" alt="screen1">
+      <img src="~common/images/screen2.png" alt="screen2">
+      <img src="~common/images/tests.png" alt="tests">
+    </div>
+  </md-card-content>
+</md-card>

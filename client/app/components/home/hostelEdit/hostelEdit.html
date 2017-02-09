@@ -1,0 +1,30 @@
+<md-content>
+  <form name="hostelForm">
+  <md-input-container class="md-icon-float md-block">
+    <label>Name</label>
+    <md-icon class="name">person</md-icon>
+    <input name="name" ng-model="$ctrl.hostel.name" ng-maxlength="15" type="text" ng-required="true">
+    <div ng-messages="hostelForm.name.$error">
+      <div ng-message="required">The name is required.</div>
+      <div ng-message="maxlength">The name is very long.</div>
+    </div>
+  </md-input-container>
+  <md-input-container md-no-float class="md-icon-float md-block">
+    <md-icon>start</md-icon>
+    <input name="stars" ng-model="$ctrl.hostel.stars" type="number" placeholder="stars" ng-min="1" ng-max="5">
+    <div ng-messages="hostelForm.stars.$error" ng-hide="showHints">
+      <div ng-message="min">The number must be greater than 0</div>
+      <div ng-message="max">The number must be less than 5</div>
+    </div>
+  </md-input-container>
+  <md-input-container class="md-icon-float md-block">
+    <md-icon class="price">attach_money</md-icon>
+    <input name="price" ng-model="$ctrl.hostel.price" type="number" ng-min="1" placeholder="price (required)" ng-required="true">
+    <div ng-messages="hostelForm.price.$error">
+      <div ng-message="required">The price is required.</div>
+      <div ng-message="min">The number must be greater than 0</div>
+    </div>
+  </md-input-container>
+  <md-button class="md-primary" ng-disabled="hostelForm.$invalid" ng-click="$ctrl.save()">Save</md-button>
+  </form>
+</md-content>
